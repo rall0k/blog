@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_moje_tests",
+  "info": {
+    "displayName": "Test",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "gallery": {
+      "type": "component",
+      "repeatable": true,
+      "component": "moje.test-component"
+    },
+    "titleGallery": {
+      "type": "string"
+    }
+  }
+}

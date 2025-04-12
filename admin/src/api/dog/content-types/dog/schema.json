@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dogs",
+  "info": {
+    "singularName": "dog",
+    "pluralName": "dogs",
+    "displayName": "dog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "gallery": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.media",
+        "shared.slider"
+      ]
+    },
+    "Section": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.media"
+    },
+    "Slider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.slider"
+    }
+  }
+}

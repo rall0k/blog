@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_moje_test_components",
+  "info": {
+    "displayName": "Multiple Gallery With Title",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "photos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
