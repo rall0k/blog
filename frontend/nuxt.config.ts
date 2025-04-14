@@ -1,26 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { pages, locales, defaultLocale } from './i18nConfig' 
+
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: '2025-04-12',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/strapi', '@nuxtjs/i18n'],
-  // I18n
+  modules: ['@nuxtjs/i18n', '@nuxtjs/strapi'],
   i18n: {
-    strategy: 'prefix_and_default', // Používanie URL s prefixom pre každý jazyk, napr. /en, /sk
-    defaultLocale: '', // Predvolený jazyk
-    locales: ['en', 'sk'],
-	fallbackLocale: '', // Ak nie je preklad, použije sa predvolený jazyk
+	customRoutes: 'config',
+    locales,
+    defaultLocale,
+	pages
   },
-  // STRAPI
   strapi: {
-    url: process.env.STRAPI_URL,
-    prefix: '/api', // ak si nemenil default
-    version: 'v4',
+    url: process.env.STRAPI_URL,  // Nastavte URL na vaše Strapi API
+    prefix: '/api',               // Prefix cesty, ak máte predponu pre API
   },
-  runtimeConfig: {
-    public: {
-      strapi: {
-        url: process.env.STRAPI_URL
-      }
-    }
-  }
 })

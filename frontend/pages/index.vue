@@ -1,27 +1,11 @@
 <script setup>
-	const i18n = useI18n()
-	const { find } = useStrapi()
-	const response = await find('about', {
-		locale: i18n.locale.value,
-		populate: {
-			MultipleGallery: {
-				populate: {
-					gallery: {
-						populate: "*"
-					}
-				}
-			}
-		}
+	definePageMeta({
+		layout: 'default'
 	})
 </script>
 
 <template>
-  <section>
-		<pre>
-			{{ i18n.locales }}
-			{{ response }}
-		</pre>
-	</section>
+  <div>
+    <h1>Index</h1>
+  </div>
 </template>
-
-<style scoped></style>
