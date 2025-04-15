@@ -1,0 +1,11 @@
+{
+	"services": {
+	  "admin": {
+		"root": "admin",
+		"startCmd": "yarn start",
+		"buildCmd": "yarn build",
+		"installCmd": "yarn install"
+	  }
+	}
+  }
+  
